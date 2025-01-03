@@ -1,0 +1,15 @@
+models:
+  - name: dim_products
+    description: Product dimension containing product name, category and subcategory.
+    columns:
+      - name: PK_PRODUCT
+        description: Product primary key
+        data_tests:
+          - unique
+          - not_null 
+      - name: NAME_PRODUCT
+        description: Produtct name
+      - name: NAME_PRODUCT_CATEGORY
+        description: Product category
+      - name: NAME_PRODUCT_SUBCATEGORY
+        description: Product subcategory
