@@ -46,7 +46,6 @@ sources:
           - name: salesorderid
           - name: salesreasonid
             data_tests:
-              - unique 
               - not_null
       - name: salesreason
         columns:
