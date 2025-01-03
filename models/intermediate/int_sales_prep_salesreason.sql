@@ -17,4 +17,4 @@ with
             from sales_orders_reasons_header
             left join sales_orders_reasons on sales_orders_reasons_header.fk_sales_reason = sales_orders_reasons.pk_sales_reason
     )
-    select * from   complete_sales_reason 
+    select * from   complete_sales_reason

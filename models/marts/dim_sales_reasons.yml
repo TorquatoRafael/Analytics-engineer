@@ -1,0 +1,12 @@
+models:
+  - name: dim_sales_reasons
+    description: Sales reasons dimension containing sales reason name and sales reason type.
+    columns:
+      - name: FK_SALES_ORDER
+        description: Sales order foreign key.
+        data_tests:
+          - not_null
+      - name: NAME_SALES_REASON
+        description: Sales reason name.
+      - name: TYPE_SALES_REASON
+        description: Sales reason type.
