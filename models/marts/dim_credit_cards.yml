@@ -1,0 +1,11 @@
+models:
+  - name: dim_credit_cards
+    description: Product dimension containing product name, category and subcategory.
+    columns:
+      - name: PK_CREDIT_CARD
+        description: Credit card primary key
+        data_tests:
+          - unique
+          - not_null 
+      - name: TYPE_CARD
+        description: Credit card type.
