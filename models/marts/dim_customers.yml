@@ -1,0 +1,15 @@
+models:
+  - name: dim_customers
+    description: Product dimension containing product name, category and subcategory.
+    columns:
+      - name: PK_CUSTOMER
+        description: Customer primary key
+        data_tests:
+          - unique
+          - not_null 
+      - name: TYPE_PERSON
+        description: Person type.
+      - name: FIRST_NAME
+        description: Person first name.       
+      - name: LAST_NAME
+        description: Person last name.   

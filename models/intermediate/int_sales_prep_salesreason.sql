@@ -11,7 +11,8 @@ with
 
     ,complete_sales_reason as (
         select
-             sales_orders_reasons_header.fk_sales_order
+            sales_orders_reasons_header.pk_sales_order_reason
+            ,sales_orders_reasons_header.fk_sales_order 
             ,sales_orders_reasons.name_sales_reason
             ,sales_orders_reasons.type_sales_reason
             from sales_orders_reasons_header
