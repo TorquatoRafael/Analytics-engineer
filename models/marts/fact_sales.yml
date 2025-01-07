@@ -1,0 +1,11 @@
+models:
+  - name: fact_sales
+    description: Product dimension containing product name, category and subcategory.
+    columns:
+      - name: PK_SALES
+        description: Product primary key
+        data_tests:
+          - not_null 
+
+
+        
