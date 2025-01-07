@@ -1,5 +1,5 @@
 /*
-Aula 8 -> 1:29:00
+Aula 8 -> 1:46:00
 ->Número de pedidos = contagem distinta de salesorderid -> Sales Order Header
 ->Quantidade comprada = soma de orderqty -> Sales Order Detail
 ->Valor total negociado = soma de [unitprice*orderqty] -> Sales Order Detail
@@ -18,7 +18,7 @@ with
 
     , joined as (
         select 
-        sales.PK_SALE
+        sales.PK_SALES
         ,sales.FK_CUSTOMER
         ,sales.FK_TERRITORY
         ,sales.FK_CREDITCARD
@@ -31,24 +31,28 @@ with
         ,sales.TAX_SALE
         ,sales.FREIGHT_SALE
         ,sales.TOTAL_SALE
-        ,sales.STATUS_SALE
+        ,sales.FK_SALES_ORDER_REASON
         from orders_detail
-        inner join sales on orders_detail.FK_SALE = sales.PK_SALE
+        inner join sales on orders_detail.FK_SALE = sales.PK_SALES
     )
 
 
 
     , metrics as (
         select
-        PK_SALE
+        PK_SALES
         ,FK_CUSTOMER
         ,FK_TERRITORY
         ,FK_CREDITCARD
         ,FK_PRODUCT_ORDER
+        ,FK_SALES_ORDER_REASON
         ,DATE_SALE
         ,QTY_SALE
         ,UNIT_PRICE_SALE
         ,QTY_SALE * UNIT_PRICE_SALE AS GROSS_SALES
+        ,cast(
+            (UNIT_PRICE_SALE * QTY_SALE * (1-UNIT_DISCOUNT_SALE))
+            as numeric(18,2)) as NET_SALES
         ,UNIT_DISCOUNT_SALE
         ,case
             when UNIT_DISCOUNT_SALE > 0 then
@@ -58,11 +62,10 @@ with
         ,SUBTOTAL_SALE
         ,TAX_SALE
         ,cast(
-            (FREIGHT_SALE / count(*) over(partition by  PK_SALE))
+            (FREIGHT_SALE / count(*) over(partition by  PK_SALES))
             as numeric(18,2)) as SHARED_SHIPPING
         ,FREIGHT_SALE
         ,TOTAL_SALE
-        ,STATUS_SALE
         from joined
     )
 
