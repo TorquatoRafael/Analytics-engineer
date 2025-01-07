@@ -1,0 +1,23 @@
+models:
+  - name: dim_address
+    description: Address dimension containing city, state and country.
+    columns:
+      - name: PK_TERRITORY
+        description: Territory primary key
+        data_tests:
+          - unique
+          - not_null 
+      - name: CITY
+        description: City name.
+      - name: STATE
+        description: State name.
+      - name: COUNTRY
+        description: Country name.
+
+
+
+
+
+
+
+
