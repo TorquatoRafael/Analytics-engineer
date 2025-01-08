@@ -1,0 +1,45 @@
+models:
+  - name: int_sales__prep_metrics
+    description: This query corresponds to the preparation for the sales table, containing the necessary metrics for the requested analyses.
+    columns:
+      - name: PK_SALES
+        description: Sales primary key.
+      - name: FK_CUSTOMER
+        description: Customer foreign key.
+      - name: FK_TERRITORY
+        description: Territory foreign key.
+      - name: FK_CREDITCARD
+        description: Credit card foreign key.
+      - name: FK_PRODUCT
+        description: Products foreign key.
+      - name: FK_SALES_REASON
+        description: Sales reason foreign key.
+      - name: DATE_SALE
+        description: Date when the sale was made.
+      - name: QTY_SALE
+        description: Quantity of product sold.
+      - name: UNIT_PRICE_SALE
+        description: Unit price of the product sold.
+      - name: GROSS_SALES
+        description: Gross sales by product.
+      - name: NET_SALES
+        description: Net sales by product.
+      - name: UNIT_DISCOUNT_SALE
+        description: Discount on the sale of the product. 
+      - name: HAD_DISCOUNT
+        description: Indicator if the product sale had a discount.
+      - name: SUBTOTAL_SALE
+        description: Total sales excluding shipping and taxes.
+      - name: TAX_SALE
+        description: Sales tax.
+      - name: SHARED_SHIPPING
+        description: Shipping per product. We divide the total shipping cost of the sale by the number of products sold in the same order."
+      - name: FREIGHT_SALE
+        description: Shipping cost of the sale.
+      - name: TOTAL_SALE
+        description: Total sales including shipping and taxes.
+
+      
+
+        
+

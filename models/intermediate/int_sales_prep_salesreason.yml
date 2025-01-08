@@ -1,0 +1,12 @@
+models:
+  - name: int_sales_prep_salesreason
+    description: This query corresponds to the preparation for the sales reason table, containing sales reason and type.
+    columns:
+      - name: PK_SALES_ORDER_REASON
+        description: Sales reason primary key.
+      - name: FK_SALES_ORDER
+        description: Sales order foreign key.
+      - name: NAME_SALES_REASON
+        description: Sales reason name.
+      - name: TYPE_SALES_REASON
+        description: Sales reason type.

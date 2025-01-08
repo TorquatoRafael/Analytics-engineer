@@ -1,0 +1,12 @@
+models:
+  - name: int_sales__prep_territory
+    description: This query corresponds to the preparation for the territory table, containing the product city, state and country.
+    columns:
+      - name: PK_TERRITORY
+        description: Territory primary key.
+      - name: CITY
+        description: City name.
+      - name: STATE
+        description: State name.
+      - name: COUNTRY
+        description: Country name.

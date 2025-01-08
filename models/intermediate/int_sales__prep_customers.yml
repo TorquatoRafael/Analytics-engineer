@@ -1,0 +1,16 @@
+models:
+  - name: int_sales__prep_customers
+    description: This query corresponds to the preparation of the customers dimension.
+    columns:
+      - name: PK_CUSTOMER
+        description: Customer primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: NAME
+        description: Customer name.
+      - name: TYPE_CUSTOMER
+        description: Can be Legal Entity, Natural Person or Not Found. Not found can be an employee, vendor, business contact, etc.
+
+
+  

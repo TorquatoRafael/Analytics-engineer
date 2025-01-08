@@ -1,5 +1,5 @@
 /*
-Aula 8 -> 1:46:00
+Aula 8 -> 2:03:27
 ->Número de pedidos = contagem distinta de salesorderid -> Sales Order Header
 ->Quantidade comprada = soma de orderqty -> Sales Order Detail
 ->Valor total negociado = soma de [unitprice*orderqty] -> Sales Order Detail
@@ -44,8 +44,8 @@ with
         ,FK_CUSTOMER
         ,FK_TERRITORY
         ,FK_CREDITCARD
-        ,FK_PRODUCT_ORDER
-        ,FK_SALES_ORDER_REASON
+        ,FK_PRODUCT_ORDER as FK_PRODUCT
+        ,FK_SALES_ORDER_REASON as FK_SALES_REASON
         ,DATE_SALE
         ,QTY_SALE
         ,UNIT_PRICE_SALE
