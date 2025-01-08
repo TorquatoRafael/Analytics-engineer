@@ -1,0 +1,8 @@
+models:
+  - name: int_sales__prep_creditcards
+    description: This query corresponds to the preparation of the credit card dimension.
+    columns:
+      - name: PK_CREDIT_CARD
+        description: Credit card primary key.
+      - name: TYPE_CARD
+        description: Type of credit card.

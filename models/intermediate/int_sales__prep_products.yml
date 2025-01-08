@@ -1,0 +1,12 @@
+models:
+  - name: int_sales__prep_products
+    description: This query corresponds to the preparation for the products sales table, containing the product name, category and subcategory.
+    columns:
+      - name: PK_PRODUCT
+        description: Products primary key.
+      - name: NAME_PRODUCT
+        description: Product name.
+      - name: NAME_PRODUCT_CATEGORY
+        description: Product category.
+      - name: NAME_PRODUCT_SUBCATEGORY
+        description: Product subcategory.
