@@ -1,0 +1,35 @@
+models:
+  - name: stg_sources__productcategory
+    description: Source that will compose the products dimension, along with the tables products category and products subcategory.
+    columns:
+      - name: PK_PRODUCT_CATEGORY
+        description: Product category primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: NAME_PRODUCT_CATEGORY
+        description: Product category name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

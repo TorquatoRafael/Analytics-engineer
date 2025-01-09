@@ -1,0 +1,31 @@
+models:
+  - name: stg_sources__person
+    description: Source that will compose the customers dimension, along with the tables customer and store.
+    columns:
+      - name: PK_PERSON
+        description: Person primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: FULL_NAME
+        description: Full name of the person.
+      - name: FIRST_NAME
+        description: First name of the person.
+      - name: LAST_NAME
+        description: Last name of the person.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

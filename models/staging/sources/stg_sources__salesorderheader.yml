@@ -1,0 +1,49 @@
+models:
+  - name: stg_sources__salesorderheader
+    description: Source that will compose the sales dimension, along with the customer, territory, credit card, and sales order reason tables.
+    columns:
+      - name: PK_SALES
+        description: Sales primary key.
+        data_tests:
+          - not_null
+      - name: FK_CUSTOMER
+        description: Customer foreign key.
+        data_tests:
+          - not_null
+      - name: FK_TERRITORY
+        description: Territory foreign key.
+        data_tests:
+          - not_null
+      - name: FK_CREDITCARD
+        description: Credit card foreign key.
+      - name: FK_SALES_ORDER_REASON
+        description: Sales order reason foreign key.
+        data_tests:
+          - unique
+          - not_null
+      - name: DATE_SALE
+        description: Date of the sale.
+      - name: SUBTOTAL_SALE
+        description: Subtotal of the sale.
+      - name: TAX_SALE
+        description: Tax on the sale.
+      - name: FREIGHT_SALE
+        description: Freight cost of the sale.
+      - name: TOTAL_SALE
+        description: Total amount of the sale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

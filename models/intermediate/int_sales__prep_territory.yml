@@ -4,6 +4,9 @@ models:
     columns:
       - name: PK_TERRITORY
         description: Territory primary key.
+        data_tests:
+          - unique
+          - not_null 
       - name: CITY
         description: City name.
       - name: STATE

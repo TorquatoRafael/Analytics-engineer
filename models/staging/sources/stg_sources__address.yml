@@ -1,10 +1,16 @@
 models:
   - name: stg_sources__address
-    description: Source that will be part of the address dimension, along with country and state.
+    description: Source that will be part of the territory dimension, along with state and country.
     columns:
       - name: PK_ADDRESS
         description: Address primary key.
+        data_tests:
+          - unique
+          - not_null 
       - name: FK_STATE
         description: State foreign key.
-
+        data_tests:
+          - not_null 
+      - name: CITY
+        description: City where sale was made.
         

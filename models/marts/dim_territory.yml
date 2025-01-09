@@ -1,5 +1,5 @@
 models:
-  - name: dim_address
+  - name: dim_territory
     description: Address dimension containing city, state and country.
     columns:
       - name: PK_TERRITORY

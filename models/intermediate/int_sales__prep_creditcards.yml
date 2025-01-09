@@ -4,5 +4,7 @@ models:
     columns:
       - name: PK_CREDIT_CARD
         description: Credit card primary key.
+        data_tests:
+          - unique
       - name: TYPE_CARD
         description: Type of credit card.

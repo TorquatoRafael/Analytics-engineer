@@ -1,0 +1,16 @@
+models:
+  - name: stg_sources__salesorderdetail
+    description: Source that will compose the sales order details, along with the sales and product tables.
+    columns:
+      - name: FK_SALE
+        description: Sales foreign key.
+        data_tests:
+          - not_null
+      - name: FK_PRODUCT_ORDER
+        description: Product order foreign key.
+      - name: QTY_SALE
+        description: Quantity of the sale.
+      - name: UNIT_PRICE_SALE
+        description: Unit price of the sale.
+      - name: UNIT_DISCOUNT_SALE
+        description: Unit discount on the sale.
