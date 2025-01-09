@@ -1,0 +1,13 @@
+models:
+  - name: stg_sources__salesreason
+    description: Source that will compose the sales reason details.
+    columns:
+      - name: PK_SALES_REASON
+        description: Sales reason primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: NAME_SALES_REASON
+        description: Sales reason name.
+      - name: TYPE_SALES_REASON
+        description: Sales reason type.

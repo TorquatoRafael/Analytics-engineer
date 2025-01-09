@@ -1,0 +1,17 @@
+models:
+  - name: stg_sources__creditcards
+    description: Source that will compose the credit card dimension.
+    columns:
+      - name: PK_CREDIT_CARD
+        description: Credit card primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: TYPE_CARD
+        description: Type of credit card.
+
+
+
+
+
+

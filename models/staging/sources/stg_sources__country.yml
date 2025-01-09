@@ -1,0 +1,15 @@
+models:
+  - name: stg_sources__country
+    description: Source that will be part of the territory dimension, along with city and state.
+    columns:
+      - name: PK_COUNTRY
+        description: Country primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: COUNTRY
+        description: Country where sale was made
+
+        
+
+

@@ -1,0 +1,23 @@
+models:
+  - name: stg_sources__customer
+    description: Source that will compose the customers dimension, along with the tables person and store.
+    columns:
+      - name: PK_CUSTOMER
+        description: Customer primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: FK_PERSON
+        description: Person foreign key.
+      - name: FK_STORE
+        description: Stores foreign key.
+
+
+
+
+
+
+
+
+
+

@@ -54,11 +54,6 @@ with
             (UNIT_PRICE_SALE * QTY_SALE * (1-UNIT_DISCOUNT_SALE))
             as numeric(18,2)) as NET_SALES
         ,UNIT_DISCOUNT_SALE
-        ,case
-            when UNIT_DISCOUNT_SALE > 0 then
-                true
-                else
-                false end as HAD_DISCOUNT
         ,SUBTOTAL_SALE
         ,TAX_SALE
         ,cast(
@@ -66,6 +61,16 @@ with
             as numeric(18,2)) as SHARED_SHIPPING
         ,FREIGHT_SALE
         ,TOTAL_SALE
+        ,case 
+            when fk_creditcard is null then
+                'Another payment method'
+                else
+                'Credit card' end as PAYMENT_METHOD 
+        ,case
+            when UNIT_DISCOUNT_SALE > 0 then
+                true
+                else
+                false end as HAD_DISCOUNT
         from joined
     )
 

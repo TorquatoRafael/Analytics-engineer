@@ -1,0 +1,29 @@
+models:
+  - name: stg_sources__store
+    description: Source that will compose the customers dimension, along with the tables customer and person.
+    columns:
+      - name: PK_STORE
+        description: Store primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: STORE_NAME
+        description: Name of the store.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

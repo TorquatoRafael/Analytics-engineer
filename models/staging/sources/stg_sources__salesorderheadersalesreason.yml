@@ -1,0 +1,24 @@
+models:
+  - name: stg_sources__salesorderheadersalesreason
+    description: Source that will compose the sales order sales reason dimension, along with the sales reason and sales order tables.
+    columns:
+      - name: PK_SALES_ORDER_REASON
+        description: Sales order reason primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: FK_SALES_REASON
+        description: Sales reason foreign key.
+      - name: FK_SALES_ORDER
+        description: Sales order foreign key.
+
+
+
+
+
+
+
+
+
+
+
