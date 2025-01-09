@@ -1,0 +1,10 @@
+models:
+  - name: stg_sources__address
+    description: Source that will be part of the address dimension, along with country and state.
+    columns:
+      - name: PK_ADDRESS
+        description: Address primary key.
+      - name: FK_STATE
+        description: State foreign key.
+
+        
