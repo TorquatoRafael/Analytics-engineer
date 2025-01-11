@@ -44,6 +44,7 @@ with
         select
         PK_SALES
         ,FK_CUSTOMER
+        ,FK_SALESPERSON
         ,FK_TERRITORY
         ,FK_CREDITCARD
         ,FK_PRODUCT_ORDER as FK_PRODUCT
