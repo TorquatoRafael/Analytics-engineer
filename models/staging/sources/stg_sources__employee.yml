@@ -1,0 +1,14 @@
+models:
+  - name: stg_sources__employee
+    description: Source will join with the sales person table.
+    columns:
+      - name: PK_EMPLOYEE
+        description: Employee primary key.
+        data_tests:
+          - unique
+          - not_null
+      - name: JOBTITLE
+        description: Job Title
+      - name: GENDER
+        description: Employee gender.
+      

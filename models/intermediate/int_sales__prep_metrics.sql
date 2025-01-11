@@ -20,6 +20,7 @@ with
         select 
         sales.PK_SALES
         ,sales.FK_CUSTOMER
+        ,sales.FK_SALESPERSON
         ,sales.FK_TERRITORY
         ,sales.FK_CREDITCARD
         ,orders_detail.FK_PRODUCT_ORDER
@@ -32,6 +33,7 @@ with
         ,sales.FREIGHT_SALE
         ,sales.TOTAL_SALE
         ,sales.FK_SALES_ORDER_REASON
+        ,sales.ONLINE_FLAG
         from orders_detail
         inner join sales on orders_detail.FK_SALE = sales.PK_SALES
     )

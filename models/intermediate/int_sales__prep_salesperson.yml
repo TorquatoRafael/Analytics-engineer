@@ -1,0 +1,19 @@
+models:
+  - name: int_sales__prep_salesperson
+    description: This query corresponds to the preparation of the sales person dimension.
+    columns:
+      - name: PK_SALESPERSON
+        description: Sales person primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: FULL_NAME
+        description: Sales person full name.
+      - name: JOB_TITLE
+        description: Job Title.
+      - name: GENDER
+        description: Sales person gender.
+
+
+
+
