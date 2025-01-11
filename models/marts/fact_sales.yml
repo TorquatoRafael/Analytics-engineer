@@ -6,6 +6,8 @@ models:
         description: Sales primary key.
       - name: FK_CUSTOMER
         description: Customer foreign key.
+      - name: FK_SALESPERSON
+        description: Sales person foreign key. 
       - name: FK_TERRITORY
         description: Territory foreign key.
       - name: FK_CREDITCARD

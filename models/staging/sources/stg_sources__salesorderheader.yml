@@ -10,6 +10,8 @@ models:
         description: Customer foreign key.
         data_tests:
           - not_null
+      - name: FK_SALESPERSON
+        description: Sales person foreign key. 
       - name: FK_TERRITORY
         description: Territory foreign key.
         data_tests:
@@ -31,6 +33,8 @@ models:
         description: Freight cost of the sale.
       - name: TOTAL_SALE
         description: Total amount of the sale.
+      - name: ONLINE_FLAG
+        description: Indicator if it was an online sale or not.
 
 
 

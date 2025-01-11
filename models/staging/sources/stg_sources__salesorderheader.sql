@@ -3,6 +3,7 @@ with
         select
               cast(SALESORDERID as int) as pk_sales
             , cast(CUSTOMERID as int) as fk_customer
+            , cast(SALESPERSONID as int) as fk_salesperson
             , cast(TERRITORYID as int) as fk_territory
             , cast(CREDITCARDID as int) as fk_creditcard
             , SALESORDERID::varchar || '-' || STATUS::varchar as fk_sales_order_reason 
@@ -11,6 +12,7 @@ with
             , cast(TAXAMT as numeric(18,2)) as tax_sale
             , cast(FREIGHT as numeric(18,2)) as  freight_sale
             , cast(TOTALDUE as numeric(18,2)) as total_sale
+            , cast(ONLINEORDERFLAG as string) as online_flag
         from {{ source('sources_adventure_works', 'salesorderheader') }}
     )
 

@@ -83,3 +83,16 @@ sources:
             data_tests:
               - unique 
               - not_null
+      - name: salesperson
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique 
+              - not_null
+      - name: employee
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique 
+              - not_null
+      

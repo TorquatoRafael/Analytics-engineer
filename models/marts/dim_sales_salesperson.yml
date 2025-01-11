@@ -1,0 +1,16 @@
+models:
+  - name: dim_salesperson.
+    description: Product dimension containing name, job title and gender.
+    columns:
+      - name: PK_SALESPERSON
+        description: Sales person primary key.
+        data_tests:
+          - unique
+          - not_null 
+      - name: FULL_NAME
+        description: Sales person full name.
+      - name: JOB_TITLE
+        description: Job Title.
+      - name: GENDER
+        description: Sales person gender.
+
