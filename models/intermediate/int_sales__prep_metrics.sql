@@ -64,6 +64,7 @@ with
             as numeric(18,2)) as SHARED_SHIPPING
         ,FREIGHT_SALE
         ,TOTAL_SALE
+        ,ONLINE_FLAG
         ,case 
             when fk_creditcard is null then
                 'Another payment method'
@@ -79,6 +80,5 @@ with
 
 select * from metrics
 
---select sum(GROSS_SALES) from metrics WHERE year(DATE_SALE) = 2011
 
 
