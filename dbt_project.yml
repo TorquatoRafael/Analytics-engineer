@@ -37,6 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   Adventure_Works:
+    +persist_docs:
+      relation: true
+      columns: true
     staging:
       +schema: stg
       sources:
