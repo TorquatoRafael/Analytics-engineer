@@ -1,11 +1,13 @@
 with
     customers as (
         select *
-        from {{ ref('stg_sources__customer') }})
+        from {{ ref('stg_sources__customer') }}
+        )
     
     ,person as (
         select *
-        from {{ ref('stg_sources__person') }})
+        from {{ ref('stg_sources__person') }}
+        )
 
     ,store as(
         select * 
@@ -28,8 +30,8 @@ with
                 THEN 'Legal Entity'
                 ELSE 'Not Found' END AS type_customer    
         from customers
-        left join person on person.pk_person = customers.pk_customer
-        left join store on store.pk_store =  customers.pk_customer
+        left join person on person.pk_person = customers.fk_person
+        left join store on store.pk_store =  customers.fk_store
     )
     
 select * from complete_customers

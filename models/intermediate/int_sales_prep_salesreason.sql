@@ -27,4 +27,4 @@ with
             from ranked_sales_orders_reasons
             left join sales_orders_reasons on ranked_sales_orders_reasons.fk_sales_reason = sales_orders_reasons.pk_sales_reason
     )
-    select * from complete_sales_reason
+    select * from complete_sales_reason 
