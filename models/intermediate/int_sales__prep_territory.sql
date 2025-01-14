@@ -1,7 +1,8 @@
 with
     address as (
         select * 
-        from {{ ref("stg_sources__address") }})
+        from {{ ref("stg_sources__address") }}
+        )
     
     ,state as (
         select * 
@@ -13,9 +14,9 @@ with
         from {{ref("stg_sources__country")}})
     
 
-    ,complete_address as (
+    ,complete_territory as (
         select
-             address.pk_address as pk_territory
+             address.pk_address
             ,address.city
             ,state.state
             ,country.country
@@ -24,7 +25,7 @@ with
         left join country on state.fk_country = country.pk_country)
 
     
-select * from complete_address
+select * from complete_territory
 
 
 

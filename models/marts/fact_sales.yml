@@ -8,8 +8,8 @@ models:
         description: Customer foreign key.
       - name: FK_SALESPERSON
         description: Sales person foreign key. 
-      - name: FK_TERRITORY
-        description: Territory foreign key.
+      - name: FK_ADDRESS
+        description: Address foreign key.
       - name: FK_CREDITCARD
         description: Credit card foreign key.
       - name: FK_PRODUCT

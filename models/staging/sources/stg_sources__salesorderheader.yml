@@ -12,8 +12,8 @@ models:
           - not_null
       - name: FK_SALESPERSON
         description: Sales person foreign key. 
-      - name: FK_TERRITORY
-        description: Territory foreign key.
+      - name: FK_ADDRESS
+        description: Address foreign key.
         data_tests:
           - not_null
       - name: FK_CREDITCARD
