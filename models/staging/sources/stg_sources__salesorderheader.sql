@@ -4,7 +4,7 @@ with
               cast(SALESORDERID as int) as pk_sales
             , cast(CUSTOMERID as int) as fk_customer
             , cast(SALESPERSONID as int) as fk_salesperson
-            , cast(TERRITORYID as int) as fk_territory
+            , cast(SHIPTOADDRESSID as int) as fk_address
             , cast(CREDITCARDID as int) as fk_creditcard
             , SALESORDERID::varchar || '-' || STATUS::varchar as fk_sales_order_reason 
             , cast(ORDERDATE as date) as date_sale

@@ -2,8 +2,8 @@ models:
   - name: int_sales__prep_territory
     description: This query corresponds to the preparation for the territory table, containing the product city, state and country.
     columns:
-      - name: PK_TERRITORY
-        description: Territory primary key.
+      - name: PK_ADDRESS
+        description: Address primary key.
         data_tests:
           - unique
           - not_null 

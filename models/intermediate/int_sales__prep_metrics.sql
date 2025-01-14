@@ -21,7 +21,7 @@ with
         sales.PK_SALES
         ,sales.FK_CUSTOMER
         ,sales.FK_SALESPERSON
-        ,sales.FK_TERRITORY
+        ,sales.FK_ADDRESS
         ,sales.FK_CREDITCARD
         ,orders_detail.FK_PRODUCT_ORDER
         ,sales.DATE_SALE
@@ -45,7 +45,7 @@ with
         PK_SALES
         ,FK_CUSTOMER
         ,FK_SALESPERSON
-        ,FK_TERRITORY
+        ,FK_ADDRESS
         ,FK_CREDITCARD
         ,FK_PRODUCT_ORDER as FK_PRODUCT
         ,FK_SALES_ORDER_REASON as FK_SALES_REASON

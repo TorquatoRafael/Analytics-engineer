@@ -10,7 +10,7 @@ models:
         description: Customer foreign key. 
       - name: FK_SALESPERSON
         description: Sales person foreign key. 
-      - name: FK_TERRITORY
+      - name: FK_ADDRESS
         description: Territory foreign key.
         data_tests:
          - not_null
