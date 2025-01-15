@@ -1,5 +1,5 @@
 models:
-  - name: dim_salesperson.
+  - name: dim_salesperson
     description: Product dimension containing name, job title and gender.
     columns:
       - name: PK_SALESPERSON
