@@ -34,8 +34,12 @@ models:
         description: Gross sales by product.
       - name: NET_SALES
         description: Net sales by product.
+      - name: DISCOUNT_SALE
+        description: Discount on the total of products sold. 
       - name: UNIT_DISCOUNT_SALE
-        description: Discount on the sale of the product. 
+        description: Unit discount per product.
+      - name: PERCENTAGE_DISCOUNT_SALE
+        description: Discount percentage.
       - name: SUBTOTAL_SALE
         description: Total sales excluding shipping and taxes.
       - name: TAX_SALE
@@ -52,7 +56,7 @@ models:
         description: Indicator if the product sale had a discount.
 
 
-      
 
-        
+
+
 
