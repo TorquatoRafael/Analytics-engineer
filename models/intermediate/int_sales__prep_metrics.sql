@@ -56,7 +56,9 @@ with
         ,cast(
             (UNIT_PRICE_SALE * QTY_SALE * (1-UNIT_DISCOUNT_SALE))
             as numeric(18,2)) as NET_SALES
-        ,UNIT_DISCOUNT_SALE
+        ,cast((GROSS_SALES - NET_SALES) as numeric(18,2)) as DISCOUNT_SALE
+        ,cast((DISCOUNT_SALE/QTY_SALE) as numeric(18,2)) as UNIT_DISCOUNT_SALE
+        ,UNIT_DISCOUNT_SALE as PERCENTAGE_DISCOUNT_SALE
         ,SUBTOTAL_SALE
         ,TAX_SALE
         ,cast(
