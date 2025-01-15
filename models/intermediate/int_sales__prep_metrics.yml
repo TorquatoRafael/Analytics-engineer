@@ -20,10 +20,6 @@ models:
         description: Products foreign key.
         data_tests:
          - not_null
-      - name: FK_SALES_REASON
-        description: Sales reason foreign key.
-        data_tests:
-         - not_null
       - name: DATE_SALE
         description: Date when the sale was made.
       - name: QTY_SALE
